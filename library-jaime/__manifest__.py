@@ -29,6 +29,7 @@
         # 'views/views.xml',
         # 'views/templates.xml',
         'views/library_book_view.xml',
+        'views/library_category_view.xml',
     ],
     'installable': True,
 

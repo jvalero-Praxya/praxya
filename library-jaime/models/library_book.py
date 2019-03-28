@@ -9,3 +9,6 @@ class LibraryBook(models.Model):
     name= fields.Char(string="Book")
     description= fields.Text(string="Description")
 
+    category_id = fields.Many2one(
+
+        comodel_name="library.category", string="Categoria")
