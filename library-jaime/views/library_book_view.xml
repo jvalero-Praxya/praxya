@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
         <!--formulario para libro-->
@@ -10,7 +11,9 @@
                         <group>
                             <field name="name"/>
                             <field name="description"/>
+                            <field name="isbn"/>
                             <field name="category_id"/>
+                            <field name="categ_count"/>
                         </group>
                     </sheet>
                 </form>
@@ -22,9 +25,12 @@
             <field name="name">Library book tree</field>
             <field name="model">library.book</field>
             <field name="arch" type="xml">
-                <tree string="book tree">
+                <tree string="book tree" editable="bottom" delete="true">
                     <field name="name"></field>
                     <field name="description"></field>
+                    <field name="isbn"></field>
+                    <field name="category_id"></field>
+                    <field name="categ_count"></field>
                 </tree>
             </field>
         </record>
