@@ -7,8 +7,8 @@ class ProductTemplate(models.Model):
 
     tipology = fields.Selection(
         selection=[
-            ['metal', 'Metal']
-            ['pwc', 'PWC']
+            ['metal', 'Metal'],
+            ['pvc', 'Pvc'],
             ['cristal', 'Cristal']
         ]
     )
