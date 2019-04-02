@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Purchase Order Line",
+    'name': "Purchase Order Line wizard",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Purchase Order Line
+        Modulo creado po Jaime
     """,
 
     'author': "My Company",
