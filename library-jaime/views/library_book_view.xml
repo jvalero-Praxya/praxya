@@ -25,7 +25,7 @@
             <field name="name">Library book tree</field>
             <field name="model">library.book</field>
             <field name="arch" type="xml">
-                <tree string="book tree" editable="bottom" delete="true">
+                <tree string="book tree" delete="true">
                     <field name="name"></field>
                     <field name="description"></field>
                     <field name="isbn"></field>

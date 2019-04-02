@@ -1,6 +1,7 @@
  #-*- coding: utf-8 -*-
 
-from odoo import api, models, fields, exceptions
+from odoo import api, models, fields
+from odoo.exceptions import ValidationError
 
 
 class LibraryBook(models.Model):
@@ -32,9 +33,8 @@ class LibraryBook(models.Model):
         for book in self:
             book.categ_count = len(book.category_id)
 
- #@api.constrains("isbn")
-    #    def check_isbn(self):
-    #    isbn = self.search([['id', '!=', self.id]]).mapped("isbn")
-    #    if self.isbn and self.isbn in isbn:
- #        raise.exceptions.ValidationError("ISBN Duplicado")
-    #Descomentar y revisar
+    @api.constrains("isbn")
+    def check_isbn(self):
+        isbn = self.search([['id', '!=', self.id]]).mapped("isbn")
+        if self.isbn and self.isbn in isbn:
+            raise ValidationError(_('ISBN Duplicado'))
